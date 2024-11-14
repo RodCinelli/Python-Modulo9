@@ -24,7 +24,7 @@ grafico = sns.lineplot(x=df['hora'], y=df['taxa'], marker='o', linestyle='-')
 
 # Ajustando o rótulo do eixo X e rotacionando para uma melhor visualização
 grafico.set(xlabel='Hora', ylabel='Taxa CDI', title='Gráfico da Taxa CDI ao Longo do Dia')
-grafico.set_xticklabels(labels=df['hora'], rotation=90)
+plt.xticks(rotation=90)  # Usando plt.xticks para rotacionar os rótulos do eixo X
 
 # Salvando o gráfico no formato PNG com o nome passado como argumento
 grafico.get_figure().savefig(f"{nome_do_grafico}.png", bbox_inches='tight')
